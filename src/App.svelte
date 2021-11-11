@@ -9,7 +9,7 @@
 </script>
 
 <main data-theme="corporate">
-  <div class="md:container md:max-auto md:space-y-6">
+  <div class="md:container md:max-auto md:space-y-6 bg-white">
     <div class="form-control">
       <!-- svelte-ignore a11y-label-has-associated-control -->
       <label class="label">
