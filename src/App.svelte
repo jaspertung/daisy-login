@@ -1,51 +1,36 @@
 <script>
-  import logo from './assets/svelte.png'
-  import Counter from './lib/Counter.svelte'
+  let username = ""
+  let password = ""
+
+  function logIn() {
+    return username
+    return password
+  }
 </script>
 
-<main>
-  <button class="btn btn-primary">primary</button> 
+<main data-theme="corporate">
+  <div class="md:container md:max-auto md:space-y-6">
+    <div class="form-control">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
+      <label class="label">
+        <span class="label-text">Username</span>
+      </label> 
+      <input type="text" placeholder="username" class="input input-bordered lg:w-60" bind:value={username}>
+    </div>
+
+    <div class="form-control">
+      <!-- svelte-ignore a11y-label-has-associated-control -->
+      <label class="label">
+        <span class="label-text">Password</span>
+      </label> 
+      <input type="text" placeholder="password" class="input input-bordered lg:w-60" bind:value={password}>
+    </div>
+      
+    <button class="btn btn-primary lg:w-60" on:click={logIn}>Log In</button>
+    <p>Logging into {username}'s account</p>
+  </div>
 </main>
 
 <style>
-  :root {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
 
-  main {
-    text-align: center;
-    padding: 1em;
-    margin: 0 auto;
-  }
-
-  img {
-    height: 16rem;
-    width: 16rem;
-  }
-
-  h1 {
-    text-transform: uppercase;
-    font-size: 4rem;
-    font-weight: 100;
-    line-height: 1.1;
-    margin: 2rem auto;
-    max-width: 14rem;
-  }
-
-  p {
-    max-width: 14rem;
-    margin: 1rem auto;
-    line-height: 1.35;
-  }
-
-  @media (min-width: 480px) {
-    h1 {
-      max-width: none;
-    }
-
-    p {
-      max-width: none;
-    }
-  }
 </style>
